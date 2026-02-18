@@ -1,0 +1,2369 @@
+/* Modern Dark Mode - Slate Theme (No AI Flavor) */
+:root {
+    /* Color Palette - Slate (Tailwind-like) */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
+
+    /* Accents - Muted, Professional */
+    --primary: #3b82f6;
+    /* Blue 500 */
+    --primary-hover: #2563eb;
+    /* Blue 600 */
+    --success: #10b981;
+    /* Emerald 500 */
+    --danger: #ef4444;
+    /* Red 500 */
+    --warning: #f59e0b;
+    /* Amber 500 */
+
+    /* Layout */
+    --bg-body: var(--slate-950);
+    --bg-card: var(--slate-900);
+    --bg-input: var(--slate-950);
+    --border-color: var(--slate-800);
+    --text-main: var(--slate-200);
+    --text-muted: var(--slate-400);
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--slate-50);
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary);
+    transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+    color: var(--primary-hover);
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar-main,
+.navbar-default {
+    background-color: var(--slate-900) !important;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: none;
+    border-radius: 0 !important;
+}
+
+.navbar-main .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+}
+
+.navbar-main .navbar-nav>li>a:hover,
+.navbar-main .navbar-nav>.active>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>.active>a {
+    color: var(--slate-50) !important;
+    background-color: transparent !important;
+}
+
+/* Header / Top Bar */
+section#header {
+    background-color: var(--slate-950);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 0;
+}
+
+ul.top-nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.top-nav li a {
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+ul.top-nav li a:hover {
+    color: var(--slate-50);
+}
+
+/* Panels / Cards */
+.panel {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.panel-default>.panel-heading {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--slate-50);
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.panel-body {
+    padding: 20px;
+    color: var(--text-main);
+}
+
+.panel-footer {
+    background-color: transparent;
+    border-top: 1px solid var(--border-color);
+    padding: 15px 20px;
+}
+
+/* Sidebar */
+.panel-sidebar {
+    background-color: transparent;
+    border: none;
+}
+
+.panel-sidebar>.panel-heading {
+    background-color: transparent;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 10px 0;
+    border: none;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px 0;
+}
+
+.list-group-item:hover,
+.list-group-item:focus {
+    background-color: transparent;
+    color: var(--slate-50);
+}
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+    background-color: transparent;
+    color: var(--primary);
+    font-weight: 600;
+    border: none;
+}
+
+/* Forms */
+.form-control {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--slate-50);
+    border-radius: 6px;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    background-color: var(--bg-input);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 1px var(--primary);
+    color: var(--slate-50);
+}
+
+label {
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    padding: 8px 16px;
+    box-shadow: none;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-hover);
+    color: white;
+}
+
+.btn-success {
+    background-color: var(--success);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+.btn-default {
+    background-color: var(--slate-800);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-default:hover,
+.btn-default:focus {
+    background-color: var(--slate-700);
+    color: var(--slate-50);
+    border-color: var(--slate-600);
+}
+
+/* Tables */
+.table {
+    color: var(--text-main);
+}
+
+.table>thead>tr>th {
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.table>tbody>tr>td {
+    border-top: 1px solid var(--border-color);
+    vertical-align: middle;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: transparent;
+    /* Remove zebra striping for cleaner look */
+}
+
+.table-hover>tbody>tr:hover {
+    background-color: var(--slate-800);
+}
+
+/* Alerts / Messages */
+.alert {
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background-color: var(--slate-800);
+    color: var(--text-main);
+}
+
+.alert-info {
+    border-color: var(--slate-700);
+    color: var(--slate-300);
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.alert-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: rgba(239, 68, 68, 0.2);
+    color: var(--danger);
+}
+
+/* Tiles (Home Shortcuts) */
+.home-shortcuts {
+    background-color: var(--slate-900);
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.home-shortcuts ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.home-shortcuts li {
+    background-color: var(--slate-800);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.home-shortcuts li:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.home-shortcuts li i {
+    font-size: 24px;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.home-shortcuts li p {
+    color: var(--slate-200);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Footer */
+#footer {
+    background-color: var(--slate-950);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    padding: 40px 0;
+}
+
+/* Modal */
+.modal-content {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+}
+
+.close {
+    color: var(--text-muted);
+    text-shadow: none;
+    opacity: 0.7;
+}
+
+.close:hover {
+    color: var(--slate-50);
+    opacity: 1;
+}
+
+/* Pagination */
+.pagination>li>a,
+.pagination>li>span {
+    background-color: var(--bg-input);
+    border-color: var(--border-color);
+    color: var(--text-main);
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus {
+    background-color: var(--slate-800);
+    border-color: var(--border-color);
+    color: var(--slate-50);
+}
+
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Remove "AI" Glows/Gradients if any */
+.tile,
+.btn,
+.panel {
+    background-image: none !important;
+}
+
+/* Login Page Specifics */
+.logincontainer {
+    background-color: var(--slate-900);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+}
+
+/* Invoice Page Specifics */
+.invoice-container {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.invoice-status .unpaid {
+    background-color: var(--danger);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.invoice-status .paid {
+    background-color: var(--success);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Layout Refactoring - Stat Cards (Client Area) */
+.stat-card {
+    background-color: var(--slate-800);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+    text-decoration: none;
+}
+
+.stat-card-icon {
+    background-color: var(--slate-900);
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.stat-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--slate-50);
+    line-height: 1.2;
+}
+
+.stat-card-label {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* Header Improvements */
+.logo-text {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: var(--slate-50) !important;
+}
+
+/* Popovers & Tooltips Dark Mode */
+.popover {
+    background-color: var(--slate-900);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.popover-title {
+    background-color: var(--slate-950);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--slate-50);
+}
+
+.popover.bottom>.arrow:after {
+    border-bottom-color: var(--slate-900);
+}
+
+/* Modals Deep Dark */
+.modal-content,
+.modal-header,
+.modal-footer {
+    border-color: var(--border-color) !important;
+}
+
+.modal-header .close {
+    color: var(--slate-400);
+}
+
+/* DataTables / Search Inputs */
+div.dataTables_wrapper div.dataTables_filter input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--slate-50);
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--slate-50);
+    border-radius: 6px;
+}
+
+/* Tables - List View */
+.table-container {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.table-list {
+    margin-bottom: 0;
+}
+
+.table-list thead th {
+    background-color: var(--slate-900);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--slate-50);
+    font-weight: 600;
+    padding: 12px;
+}
+
+.table-list tbody td {
+    border-top: 1px solid var(--border-color);
+    padding: 12px;
+    vertical-align: middle;
+}
+
+/* Status Labels / Badges */
+.label {
+    border-radius: 4px;
+    font-weight: 500;
+    padding: 4px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.label-success,
+.status-active,
+.status-paid,
+.status-open {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.label-warning,
+.status-pending,
+.status-unpaid {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.label-danger,
+.status-terminated,
+.status-cancelled,
+.status-fraud,
+.status-closed {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: var(--danger);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.label-default,
+.label-info {
+    background-color: var(--slate-800);
+    color: var(--slate-300);
+    border: 1px solid var(--slate-700);
+}
+
+/* DataTables Overrides */
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    color: var(--text-muted) !important;
+    padding-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: var(--text-muted) !important;
+    border: 1px solid transparent;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: var(--primary) !important;
+    color: white !important;
+    border: 1px solid var(--primary) !important;
+    border-radius: 4px;
+}
+
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tabs>li>a {
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: var(--text-muted);
+    border-radius: 6px 6px 0 0;
+}
+
+.nav-tabs>li>a:hover {
+    background-color: var(--slate-800);
+    border-color: var(--border-color) var(--border-color) transparent;
+    color: var(--slate-50);
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    color: var(--primary);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-bottom-color: transparent;
+    font-weight: 600;
+}
+
+/* Product Status Badge (Details Page) */
+.product-status {
+    background-color: var(--slate-800);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-status-active {
+    border-color: var(--success);
+}
+
+.product-status-pending {
+    border-color: var(--warning);
+}
+
+.product-status-suspended,
+.product-status-terminated {
+    border-color: var(--danger);
+}
+
+.product-icon .fa-stack-2x {
+    color: var(--slate-900);
+    opacity: 0.5;
+}
+
+.product-icon .fa-inverse {
+    color: var(--slate-400);
+}
+
+/* Order Form / Cart Overrides (Generic) */
+#order-standard_cart .header-lined,
+#order-standard_cart .product-info,
+#order-standard_cart .summary-container {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border-color: var(--border-color) !important;
+}
+
+#order-standard_cart .form-control {
+    background-color: var(--bg-input) !important;
+    border-color: var(--border-color) !important;
+    color: var(--slate-50) !important;
+}
+
+.cart-body {
+    background-color: var(--bg-body) !important;
+}
+
+/* Pricing Tables (Cart) */
+.price-table-container .price-table {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.price-table-container .price-table .top-content {
+    background-color: var(--slate-800);
+    border-bottom: 1px solid var(--border-color);
+}
+
+
+/* Knowledgebase */
+.kb-search .form-control {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-color);
+    color: var(--slate-50);
+    height: 50px;
+}
+
+.kbcategories a {
+    display: block;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: var(--slate-50);
+    transition: all 0.2s ease;
+}
+
+.kbcategories a:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.kbcategories a i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.kbarticles a {
+    color: var(--text-main);
+    display: block;
+    padding: 5px 0;
+}
+
+.kbarticles a:hover {
+    color: var(--primary);
+}
+
+.kbarticles .glyphicon {
+    color: var(--text-muted);
+}
+
+/* Affiliates */
+.affiliate-stat {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-muted);
+}
+
+.affiliate-stat span {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--slate-50);
+    margin-bottom: 5px;
+}
+
+.affiliate-stat i {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+/* Override default affiliate alerts */
+.affiliate-stat.alert-warning,
+.affiliate-stat.alert-info,
+.affiliate-stat.alert-success {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+.affiliate-referral-link {
+    background-color: var(--slate-900);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 30px 0;
+    font-family: monospace;
+    font-size: 16px;
+    color: var(--primary);
+}
+
+/* User Profile / General Polish */
+.well {
+    background-color: var(--slate-900);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+.jumbotron {
+    background-color: var(--slate-900);
+    color: var(--white);
+    border-radius: 12px;
+}
+
+code {
+    background-color: var(--slate-800);
+    color: var(--primary);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+
+/* Registration / Contact / Edge Cases */
+.sub-heading {
+    border-bottom: 1px solid var(--border-color);
+    color: var(--slate-50);
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+.prepend-icon .field-icon {
+    background-color: var(--slate-800);
+    border: 1px solid var(--border-color);
+    border-right: none;
+    color: var(--text-muted);
+}
+
+.prepend-icon .field {
+    border-left: none;
+}
+
+.prepend-icon .field:focus {
+    box-shadow: none;
+}
+
+/* Password Strength Meter */
+.password-strength-meter .progress {
+    background-color: var(--slate-800);
+}
+
+/* Marketing Email Opt-in */
+.marketing-email-optin {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Captcha alignment */
+.captcha-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Recaptcha dark theme alignment if needed */
+.g-recaptcha {
+    display: inline-block;
+}
+
+/* --- CRITICAL ORDER FORM FIXES --- */
+
+/* Sidebar Navigation */
+.sidebar .list-group-item {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-muted);
+}
+
+.sidebar .list-group-item:hover {
+    background-color: var(--slate-800);
+    color: var(--slate-50);
+}
+
+.sidebar .list-group-item.active,
+.sidebar .list-group-item.active:hover,
+.sidebar .list-group-item.active:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.sidebar .panel-sidebar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.sidebar .panel-sidebar>.panel-heading {
+    background-color: var(--slate-900);
+    color: var(--slate-50);
+    border-color: var(--border-color);
+}
+
+/* Standard Cart - Product Grid Fixes */
+#order-standard_cart .products .product {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#order-standard_cart .products .product header {
+    background-color: var(--slate-800);
+    color: var(--slate-50);
+    border-radius: 8px 8px 0 0;
+    padding: 10px 15px;
+}
+
+#order-standard_cart .products .product-desc {
+    color: var(--text-muted);
+    /* Fix invisible text */
+    padding: 15px;
+}
+
+#order-standard_cart .products .product-price {
+    color: var(--slate-50);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#order-standard_cart .products .product span.qty {
+    color: var(--text-muted);
+}
+
+#order-standard_cart .products .product header span {
+    color: var(--slate-300);
+    /* Availability count */
+}
+
+/* Fix "View Cart" and other sidebar buttons */
+.sidebar .btn-info,
+.sidebar .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Order Summary Header Styling */
+#order-standard_cart .header-lined {
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 20px;
+}
+
+
+/* Sidebar Icons */
+.sidebar .list-group-item i {
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+.sidebar .list-group-item:hover i {
+    opacity: 1;
+    color: var(--white);
+}
+
+/* Modern Order Form Overrides (Safety Net) */
+#order-modern .pricing-table {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+#order-modern .pricing-table .header {
+    background-color: var(--slate-800);
+    color: var(--slate-50);
+}
+
+#order-modern .fs1 {
+    color: var(--slate-50) !important;
+}
+
+/* Universal Table Fix for Orders */
+.cart-body table,
+.cart-body th,
+.cart-body td {
+    background-color: transparent !important;
+    color: var(--slate-50) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* --- FORCE OVERRIDES FOR ALL.MIN.CSS (USER REQUEST) --- */
+
+/* 1. Modal Content Force Dark */
+.modal-content {
+    background-color: var(--slate-900) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-main) !important;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+}
+
+.modal-header,
+.modal-footer {
+    border-color: var(--border-color) !important;
+}
+
+.modal-title {
+    color: var(--slate-50) !important;
+}
+
+.close {
+    color: var(--slate-50) !important;
+    text-shadow: none !important;
+    opacity: 0.8 !important;
+}
+
+.close:hover {
+    opacity: 1 !important;
+}
+
+/* 2. Product Footer & Price (Standard Cart) */
+#order-standard_cart .products .product footer {
+    background-color: transparent !important;
+    border-top: 1px solid var(--border-color) !important;
+    padding: 15px;
+    border-radius: 0 0 8px 8px;
+}
+
+/* 3. Collapsed Sidebar Panels (Mobile/Tablet View) */
+.sidebar-collapsed .panel {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    margin-bottom: 15px !important;
+}
+
+.sidebar-collapsed .panel-heading {
+    background-color: var(--slate-800) !important;
+    color: var(--slate-50) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.sidebar-collapsed .panel-body {
+    background-color: var(--bg-card) !important;
+}
+
+/* 4. Form Controls inside Cards & General Inputs */
+.panel-body select.form-control,
+input.form-control,
+select.form-control,
+textarea.form-control {
+    background-color: var(--bg-input) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* 5. Fullpage Overlay */
+#fullpage-overlay {
+    background-color: rgba(15, 23, 42, 0.95) !important;
+    /* Dark overlay */
+}
+
+#fullpage-overlay .msg {
+    color: var(--slate-50) !important;
+    font-weight: 600;
+}
+
+/* 6. Label & Badges Overrides */
+
+/* 7. Universal FontAwesome & Icon Override (Safety) */
+.fas,
+.far,
+.fab,
+.fa,
+.glyphicon {
+    color: var(--primary);
+}
+
+/* Inherit header colors */
+h1 i,
+h2 i,
+h3 i,
+h4 i,
+h5 i,
+h6 i,
+.panel-title i,
+.modal-title i {
+    color: inherit !important;
+}
+
+/* Inherit button/alert colors */
+.btn .fas,
+.btn .far,
+.btn .fab,
+.btn .fa,
+.btn .glyphicon,
+.alert .fas,
+.alert .far,
+.alert .fab,
+.alert .fa,
+.alert .glyphicon {
+    color: inherit !important;
+}
+
+/* 8. Input Groups (Addons) Override */
+.input-group-addon {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-muted) !important;
+}
+
+.input-group-addon .fas,
+.input-group-addon .fa,
+.input-group-addon .glyphicon {
+    color: var(--text-muted) !important;
+}
+
+/* 9. Pagination Overrides */
+.pagination>li>a,
+.pagination>li>span {
+    background-color: var(--bg-card) !important;
+    border-color: var(--border-color) !important;
+    color: var(--primary) !important;
+}
+
+.pagination>.active>a,
+.pagination>.active>span {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+.pagination>.disabled>a,
+.pagination>.disabled>span {
+    background-color: var(--slate-900) !important;
+    color: var(--text-muted) !important;
+}
+
+
+
+/* --- EMERGENCY OVERRIDES FOR USER REQUESTED CLASSES --- */
+
+/* 11. Main Body Container */
+section#main-body,
+#main-body .container,
+#main-body .row {
+    background-color: transparent !important;
+}
+
+/* 12. Product Containers - Removed (consolidated into section 44 below) */
+
+/* 13. Product Header (Resetting any 'clearfix' or 'row' interference) */
+/* Merged above */
+
+/* 14. Fix standard cart 'products' wrapper */
+#order-standard_cart .products {
+    background-color: transparent !important;
+}
+
+/* 15. Global Row Fix */
+.row {
+    background-color: transparent !important;
+}
+
+/* 16. Clearfix Fix (Ensure no bg color) - Exclude .product cards */
+.clearfix:not(.product) {
+    background-color: transparent !important;
+}
+
+/* --- TARGETED FIXES FOR CART & CHECKOUT ELEMENTS --- */
+
+/* 17. Cart Items Header */
+.view-cart-items-header {
+    background-color: var(--slate-800) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px 6px 0 0 !important;
+    padding: 10px 15px !important;
+    font-weight: 600 !important;
+}
+
+/* 18. Form Groups (Often have bg in some themes) */
+.form-group {
+    background-color: transparent !important;
+}
+
+/* 19. Input Addons with Icons (Prepend Icon) */
+.prepend-icon {
+    position: relative;
+    display: block;
+}
+
+.prepend-icon .field-icon {
+    color: var(--text-muted) !important;
+    z-index: 2;
+}
+
+.prepend-icon input,
+.prepend-icon .field {
+    background-color: var(--bg-input) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    padding-left: 35px !important;
+    /* Space for icon if needed */
+}
+
+/* 20. Credit Card Input (Cardno) */
+.cardno,
+input[name="ccnumber"],
+input[name="ccexpiryyear"],
+input[name="ccexpirymonth"],
+input[name="cccvv"] {
+    background-color: var(--bg-input) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    font-family: monospace !important;
+}
+
+/* 21. Promo Code Validation Section */
+.validatepromo {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 15px 0 !important;
+}
+
+.validatepromo input {
+    background-color: var(--bg-input) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* 22. Generic Footer Overrides (Modal or Panel Footers) */
+footer,
+.footer,
+.panel-footer,
+.modal-footer {
+    background-color: var(--slate-950) !important;
+    color: var(--text-muted) !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+/* Override: Product card footer should inherit card background, not generic footer dark bg */
+.product footer {
+    background-color: transparent !important;
+    border-top: 1px solid var(--border-color) !important;
+}
+
+/* --- ADDRESS INPUTS & PANEL LAYOUT FIXES --- */
+
+/* 23. Address Inputs Layout & Color */
+#inputAddress,
+#inputAddress2 {
+    background-color: var(--bg-input) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    display: block !important;
+    width: 100% !important;
+    /* Fix potential layout breaking */
+    margin-bottom: 15px !important;
+    /* Ensure spacing */
+    padding: 10px !important;
+    height: auto !important;
+    /* Prevent collapse */
+}
+
+/* 24. Sub-Heading Style */
+.sub-heading {
+    color: var(--slate-300) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    /* Ensure full width */
+    display: block !important;
+}
+
+/* 25. Panel Layout & Colors (Critical Fix) */
+.panel-heading {
+    background-color: var(--slate-800) !important;
+    color: var(--slate-50) !important;
+    border-color: var(--border-color) !important;
+    padding: 15px !important;
+    /* Unified padding */
+    border-radius: 6px 6px 0 0 !important;
+}
+
+.panel-title {
+    color: inherit !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    display: block !important;
+    /* Prevent float issues */
+    float: none !important;
+}
+
+
+/* 26. Specific Footer Section Override (User Request) */
+section#footer {
+    background-color: var(--slate-950) !important;
+    color: var(--text-muted) !important;
+    border-top: 1px solid var(--border-color) !important;
+    padding: 20px 0 !important;
+    margin-top: 0 !important;
+    /* Remove gap if any */
+}
+
+
+section#footer p {
+    color: var(--text-muted) !important;
+    margin: 0 !important;
+}
+
+/* --- FINAL LAYOUT & PRODUCT FOOTER FIXES --- */
+
+/* 27. Fix 'header-lined' in Cart Body */
+.cart-body .header-lined {
+    display: block !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    margin-bottom: 20px !important;
+    text-align: left !important;
+    /* Ensure alignment */
+}
+
+.cart-body .header-lined h1 {
+    font-size: 1.8em !important;
+    margin-bottom: 10px !important;
+}
+
+/* 28. Fix Product Footer "Three Colors" Issue */
+/* The user reported that footer, pricing, and button area have different backgrounds. */
+
+/* --- CART BODY LAYOUT REPAIR --- */
+
+/* 29. Fix sidebar-collapsed Layout (Make it side-by-side) */
+.cart-body .sidebar-collapsed {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+    margin-bottom: 25px !important;
+    background: transparent !important;
+}
+
+.cart-body .sidebar-collapsed .panel {
+    flex: 1 !important;
+    min-width: 250px !important;
+    margin-bottom: 0 !important;
+    /* Managed by gap */
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.cart-body .sidebar-collapsed .panel-heading {
+    background-color: var(--slate-900) !important;
+    padding: 10px 15px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.cart-body .sidebar-collapsed .panel-body {
+    padding: 15px !important;
+    background-color: var(--slate-800) !important;
+}
+
+/* 30. Ensure Header separates well */
+.cart-body .header-lined {
+    margin-bottom: 25px !important;
+}
+
+/* 31. Fix Products Container */
+
+/* 31. Fix Products Container */
+#products {
+    margin-top: 20px !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* --- SIDEBAR & SECONDARY PANEL FIXES --- */
+
+/* 32. Sidebar Spacing and Style */
+.sidebar,
+.sidebar-secondary {
+    margin-bottom: 25px !important;
+}
+
+/* Ensure secondary sidebar on the left has margin if it's floated */
+.col-md-3.sidebar-secondary.pull-md-left {
+    margin-right: 0 !important;
+    /* Bootstrap handles grid usually, but we ensure no overlap */
+    padding-right: 15px !important;
+    /* Visual gap */
+}
+
+/* 33. Panel Sidebar (The container of links) */
+.panel-sidebar {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    margin-bottom: 20px !important;
+    /* Ensure spacing between multiple panels */
+    border-radius: 6px !important;
+    overflow: hidden;
+    /* For header radius */
+}
+
+.panel-sidebar .panel-heading {
+    background-color: var(--slate-900) !important;
+    padding: 12px 15px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.panel-sidebar .panel-title {
+    font-size: 1.1em !important;
+    color: var(--slate-50) !important;
+}
+
+/* 34. List Group in Sidebar */
+.panel-sidebar .list-group-item {
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    color: var(--text-muted) !important;
+    padding: 10px 15px !important;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.panel-sidebar .list-group-item:last-child {
+    border-bottom: none !important;
+}
+
+.panel-sidebar .list-group-item:hover {
+    background-color: var(--slate-700) !important;
+    color: var(--slate-50) !important;
+}
+
+.panel-sidebar .list-group-item.active {
+    background-color: var(--primary) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+
+
+/* 35. Custom Select Styling - Premium "Top Level" Component */
+
+select.form-control,
+select.custom-select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: var(--slate-800) !important;
+    color: #fff !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 12px 40px 12px 15px !important;
+
+    font-size: 1.15rem !important;
+    /* Larger text (~18px) */
+    font-weight: 600 !important;
+    /* Semi-Bold */
+    letter-spacing: 0.02em !important;
+    line-height: normal !important;
+
+    /* Fix for firefox/alignment */
+    width: 100% !important;
+    cursor: pointer !important;
+
+    /* CRITICAL FIX: Height Auto to prevent text clipping */
+    height: auto !important;
+    min-height: 48px !important;
+    /* Ensure consistent Touch Target */
+
+    /* Text Overflow Handling */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    /* Force Native Dark Mode for Options */
+    color-scheme: dark !important;
+
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 1rem center !important;
+    background-size: 10px 12px !important;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+
+select.form-control:hover,
+select.custom-select:hover {
+    border-color: var(--slate-600) !important;
+    background-color: var(--slate-700) !important;
+}
+
+select.form-control:focus,
+select.custom-select:focus {
+    border-color: var(--primary) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Fix Option Styling (for browsers that support it) */
+select.form-control option,
+select.custom-select option {
+    background-color: var(--slate-900) !important;
+    color: #fff !important;
+    padding: 10px !important;
+}
+
+
+/* ============================================================
+   CART SUMMARY & TABS - FORCE OVERRIDES (all.css / all.min.css)
+   ============================================================ */
+
+/* 36. Secondary Cart Body Container */
+.secondary-cart-body {
+    background-color: var(--slate-900) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    margin-bottom: 24px !important;
+    color: var(--text-main) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Force all text inside secondary-cart-body to be light */
+.secondary-cart-body,
+.secondary-cart-body div,
+.secondary-cart-body span,
+.secondary-cart-body p,
+.secondary-cart-body label,
+.secondary-cart-body a:not(.btn) {
+    color: var(--slate-300) !important;
+}
+
+/* Force all rows/cols inside cart body transparent */
+.secondary-cart-body .row,
+.secondary-cart-body [class*="col-"] {
+    background-color: transparent !important;
+}
+
+/* 37. View Cart Items Header */
+.view-cart-items-header {
+    background-color: var(--slate-800) !important;
+    color: var(--slate-50) !important;
+    padding: 12px 20px !important;
+    border-radius: 8px 8px 0 0 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    border: 1px solid var(--border-color) !important;
+    border-bottom: none !important;
+}
+
+.view-cart-items-header .row {
+    background-color: transparent !important;
+}
+
+.view-cart-items-header div[class*="col-"] {
+    color: var(--slate-400) !important;
+    background-color: transparent !important;
+}
+
+/* 37b. View Cart Items Container */
+.view-cart-items {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    border-top: none !important;
+    border-radius: 0 0 8px 8px !important;
+    margin-bottom: 16px !important;
+    overflow: hidden !important;
+}
+
+/* Individual Cart Item */
+.view-cart-items .item {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 16px 20px !important;
+    color: var(--text-main) !important;
+    transition: background-color 0.15s ease !important;
+}
+
+.view-cart-items .item:last-child {
+    border-bottom: none !important;
+}
+
+.view-cart-items .item:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.view-cart-items .item .row {
+    background-color: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.view-cart-items .item div[class*="col-"] {
+    background-color: transparent !important;
+}
+
+
+/* Item Title (Product Name) */
+.view-cart-items .item-title {
+    font-weight: 700 !important;
+    color: var(--slate-50) !important;
+    display: block !important;
+    margin-bottom: 6px !important;
+    font-size: 1.4rem !important;
+    /* Increased from 1.15rem */
+    line-height: 1.4 !important;
+}
+
+/* Item Group (Category, etc.) */
+.view-cart-items .item-group {
+    color: var(--text-muted) !important;
+    font-size: 1.0rem !important;
+    /* Increased from 0.9rem */
+    display: block !important;
+    margin-bottom: 4px !important;
+}
+
+/* Item Price */
+.view-cart-items .item-price {
+    text-align: right !important;
+}
+
+.view-cart-items .item-price>span:first-child {
+    color: var(--slate-50) !important;
+    font-weight: 800 !important;
+    /* Extra bold */
+    font-size: 1.4rem !important;
+    /* Increased from 1.2rem */
+    display: block !important;
+}
+
+.view-cart-items .item-price .cycle {
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+    /* Increased from 0.85rem */
+    font-weight: 500 !important;
+    display: block !important;
+    margin-top: 4px !important;
+}
+
+/* Edit & Remove Buttons inside items */
+.view-cart-items .btn-link {
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+    /* Increased from 0.85rem */
+    padding: 6px 12px !important;
+    /* Increased padding */
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.view-cart-items .btn-link:hover {
+    color: var(--primary) !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    border-radius: 4px !important;
+}
+
+.view-cart-items .btn-link .fas,
+.view-cart-items .btn-link .fa {
+    color: inherit !important;
+    font-size: 0.9rem !important;
+    /* Increased icon size */
+    margin-right: 4px !important;
+}
+
+/* Remove button (X) */
+.view-cart-items .btn-remove-from-cart {
+    color: var(--text-muted) !important;
+    opacity: 0.6 !important;
+    transition: opacity 0.15s ease, color 0.15s ease !important;
+}
+
+.view-cart-items .btn-remove-from-cart:hover {
+    color: var(--danger) !important;
+    opacity: 1 !important;
+}
+
+.view-cart-items .btn-remove-from-cart .fas,
+.view-cart-items .btn-remove-from-cart .fa {
+    color: inherit !important;
+}
+
+/* Empty Cart Button - Improved Layout */
+.empty-cart {
+    background-color: transparent !important;
+    padding: 10px 0 !important;
+    text-align: right !important;
+    /* Changed to right aligned */
+    margin-bottom: 8px !important;
+}
+
+.empty-cart .btn-link {
+    color: var(--danger) !important;
+    /* Make it red by default */
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.2) !important;
+    border-radius: 6px !important;
+    display: inline-block !important;
+    transition: all 0.2s ease !important;
+}
+
+.empty-cart .btn-link:hover {
+    background-color: var(--danger) !important;
+    color: #fff !important;
+}
+
+.empty-cart .btn-link .fas,
+.empty-cart .btn-link .fa {
+    color: inherit !important;
+    margin-right: 6px !important;
+}
+
+.empty-cart .btn-link span {
+    color: inherit !important;
+    font-weight: 600 !important;
+}
+
+/* 38. Tabs (Promo & Tax) */
+.view-cart-tabs {
+    margin-top: 20px !important;
+}
+
+.view-cart-tabs .nav-tabs {
+    border-bottom: 1px solid var(--border-color) !important;
+    background-color: transparent !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+}
+
+.view-cart-tabs .nav-tabs>li,
+.view-cart-tabs .nav-tabs>.nav-item {
+    background-color: transparent !important;
+    margin-right: 8px !important;
+    /* Added spacing between tabs */
+    margin-bottom: -1px !important;
+}
+
+.view-cart-tabs .nav-tabs>li>a,
+.view-cart-tabs .nav-tabs>li>.nav-link {
+    background-color: transparent !important;
+    color: var(--text-muted) !important;
+    border: 1px solid transparent !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    /* Bold text for tabs */
+    transition: color 0.15s ease !important;
+}
+
+.view-cart-tabs .nav-tabs>li>a:hover,
+.view-cart-tabs .nav-tabs>li>.nav-link:hover {
+    color: var(--slate-50) !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
+
+.view-cart-tabs .nav-tabs>li.active>a,
+.view-cart-tabs .nav-tabs>li.active>a:hover,
+.view-cart-tabs .nav-tabs>li.active>a:focus,
+.view-cart-tabs .nav-tabs>.nav-item>.nav-link.active {
+    background-color: var(--slate-800) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    border-bottom-color: var(--slate-800) !important;
+    border-radius: 8px 8px 0 0 !important;
+    font-weight: 600 !important;
+}
+
+
+
+/* Tab Content */
+.view-cart-tabs .tab-content {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    border-top: none !important;
+    padding: 24px !important;
+    border-radius: 0 0 8px 8px !important;
+    color: var(--text-main) !important;
+}
+
+.view-cart-tabs .tab-pane {
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+}
+
+/* Promo Code Form */
+.view-cart-tabs .promo .form-group {
+    margin-bottom: 15px !important;
+    background-color: transparent !important;
+}
+
+.view-cart-tabs .promo label {
+    color: var(--text-muted) !important;
+}
+
+.view-cart-tabs .promo .field-icon {
+    color: var(--text-muted) !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.view-cart-tabs .promo .field-icon .fas,
+.view-cart-tabs .promo .field-icon .fa {
+    color: var(--text-muted) !important;
+}
+
+.view-cart-tabs .promo input.form-control,
+.view-cart-tabs .promo input.field {
+    background-color: var(--slate-900) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    padding: 10px 15px 10px 40px !important;
+}
+
+.view-cart-tabs .promo input.form-control:focus,
+.view-cart-tabs .promo input.field:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+}
+
+.view-cart-tabs .promo input.form-control::placeholder {
+    color: var(--slate-500) !important;
+}
+
+.view-cart-tabs .promo .btn-default,
+.view-cart-tabs .promo button[name="validatepromo"] {
+    background-color: var(--slate-700) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    padding: 10px 16px !important;
+    transition: all 0.15s ease !important;
+}
+
+.view-cart-tabs .promo .btn-default:hover,
+.view-cart-tabs .promo button[name="validatepromo"]:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+/* Tax Calculator Form */
+.view-cart-tabs #calcTaxes {
+    background-color: transparent !important;
+}
+
+.view-cart-tabs #calcTaxes .form-group {
+    margin-bottom: 15px !important;
+    background-color: transparent !important;
+}
+
+.view-cart-tabs #calcTaxes .control-label {
+    color: var(--slate-300) !important;
+    font-weight: 500 !important;
+}
+
+.view-cart-tabs #calcTaxes .btn-default {
+    background-color: var(--slate-700) !important;
+    color: var(--slate-50) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.view-cart-tabs #calcTaxes .btn-default:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+/* 39. Fix Layout Form Groups in Tabs */
+.view-cart-tabs .form-group {
+    margin-bottom: 15px !important;
+    background-color: transparent !important;
+}
+
+
+/* 40. Refined Header-Lined (User Request: Spacing & Radius) */
+.cart-body .header-lined {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    padding: 20px 25px !important;
+    margin-bottom: 30px !important;
+    display: block !important;
+    /* Ensure box model works */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.cart-body .header-lined h1 {
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    font-size: 2.5rem !important;
+    /* ~40px */
+    font-weight: 800 !important;
+    /* Extra Bold */
+    color: #fff !important;
+    /* Pure White */
+    border-bottom: none !important;
+    letter-spacing: -0.025em !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+    /* Enhance clarity */
+}
+
+.cart-body .header-lined p {
+    margin-bottom: 0 !important;
+    color: var(--slate-200) !important;
+    /* Brighter than muted */
+    font-size: 1.15rem !important;
+    /* Slightly larger */
+    line-height: 1.6 !important;
+
+    /* 41. Secondary Cart & Order Summary Alignment Fixes */
+
+    /* Make Order Summary Match Secondary Cart Body */
+    .order-summary {
+        background-color: var(--slate-900) !important;
+        border: 1px solid var(--border-color) !important;
+        border-radius: 8px !important;
+        padding: 20px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .order-summary h2 {
+        margin-top: 0 !important;
+        color: #fff !important;
+        font-size: 1.5rem !important;
+        border-bottom: 1px solid var(--border-color) !important;
+        padding-bottom: 15px !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* Fix Tab Content alignment to match */
+    .view-cart-tabs .tab-content {
+        background-color: var(--slate-900) !important;
+        /* Match Body */
+        padding: 25px !important;
+        /* Increase padding for breathing room */
+        border: 1px solid var(--border-color) !important;
+        border-radius: 0 0 8px 8px !important;
+        /* Match rounded corners */
+    }
+
+    .view-cart-tabs .nav-tabs>li.active>a {
+        background-color: var(--slate-900) !important;
+        /* Match Body */
+        border-bottom-color: var(--slate-900) !important;
+    }
+
+    /* Fix Promo Code Input Group Alignment */
+    .prepend-icon {
+        position: relative;
+        display: flex !important;
+        /* Use Flexbox */
+        align-items: center;
+        margin-bottom: 15px !important;
+    }
+
+    .prepend-icon .field-icon {
+        position: absolute;
+        /* Keep absolute but center it vertically */
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 4;
+        color: var(--slate-400) !important;
+        font-size: 1.1rem !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+    }
+
+    .prepend-icon .field {
+        padding-left: 45px !important;
+        /* Space for icon */
+        height: auto !important;
+        /* Let padding define height */
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    /* Fix Tax Calculator Form Group Rows */
+    #calcTaxes .form-group.row {
+        display: flex !important;
+        flex-wrap: wrap;
+        align-items: center !important;
+        /* Vertical Center Labels with Inputs */
+        margin-bottom: 15px !important;
+    }
+
+    #calcTaxes .control-label {
+        text-align: right !important;
+        padding-right: 15px !important;
+        color: var(--slate-300) !important;
+        font-weight: 500 !important;
+        margin-bottom: 0 !important;
+        /* Remove bottom margin for flex alignment */
+        padding-top: 0 !important;
+        /* Remove native BS padding */
+    }
+
+    /* Ensure Selects in Tax Calc are full width of their col */
+    #calcTaxes select {
+        width: 100% !important;
+    }
+
+    /* Button Alignment */
+    .view-cart-tabs button[type="submit"] {
+        margin-top: 10px;
+        width: 100%;
+
+    }
+}
+
+
+/* 42. Navbar Alignment Fix (Desktop) */
+@media (min-width: 768px) {
+    .navbar-main .container {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .navbar-main .navbar-header {
+        float: none !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        margin-right: 20px !important;
+        /* Spacing between logo and nav */
+    }
+
+    .navbar-main .navbar-collapse {
+        float: none !important;
+        width: auto !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-grow: 1 !important;
+        /* Occupy remaining space */
+    }
+
+    .navbar-main .navbar-nav {
+        float: none !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    /* Push Right Nav to the right */
+    .navbar-main .navbar-nav.navbar-right {
+        margin-left: auto !important;
+    }
+
+    .navbar-main .navbar-nav>li {
+        float: none !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .navbar-main .navbar-nav>li>a {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        height: 100% !important;
+    }
+
+    /* Ensure brand is vertically centered */
+    .navbar-brand {
+        padding: 0 !important;
+        height: auto !important;
+        line-height: inherit !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+
+    .navbar-brand img {
+        max-height: 40px !important;
+        /* Restrain logo height */
+        width: auto !important;
+    }
+}
+
+/* 43. Navbar Dropdown Styling & Animation */
+.navbar-main .dropdown-menu,
+.navbar-default .dropdown-menu {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 8px !important;
+    padding: 10px 0 !important;
+    margin-top: 10px !important;
+    /* Spacing from nav */
+
+    /* Animation */
+    display: block;
+    /* Required for animation, but hidden via opacity/visibility usually */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Show Dropdown on Hover/Focus (Standard Bootstrap open class) */
+.navbar-main .dropdown.open .dropdown-menu,
+.navbar-default .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.navbar-main .dropdown-menu>li>a,
+.navbar-default .dropdown-menu>li>a {
+    color: var(--slate-200) !important;
+    /* Clearer text */
+    padding: 10px 20px !important;
+    /* More breathing room */
+    font-size: 1.05rem !important;
+    /* Bigger */
+    font-weight: 600 !important;
+    /* Semi-Bold */
+    transition: all 0.15s ease;
+    letter-spacing: 0.01em !important;
+}
+
+
+.navbar-main .dropdown-menu>li>a:hover,
+.navbar-default .dropdown-menu>li>a:hover,
+.navbar-main .dropdown-menu>li>a:focus,
+.navbar-default .dropdown-menu>li>a:focus {
+    background-color: var(--slate-700) !important;
+    color: var(--slate-50) !important;
+    text-decoration: none !important;
+}
+
+.navbar-main .dropdown-menu .nav-divider,
+.navbar-default .dropdown-menu .nav-divider {
+    background-color: var(--border-color) !important;
+    margin: 8px 0 !important;
+}
+
+.navbar-main .dropdown-menu>li>a>.fas,
+.navbar-default .dropdown-menu>li>a>.fas {
+    margin-right: 8px;
+    /* Space out icons if present */
+    width: 20px;
+    text-align: center;
+}
+
+/* 44. Product Grid & Card Styling Fixes */
+.products .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products .col-md-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.product {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 12px !important;
+    margin-bottom: 24px !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+    /* Ensure rounded corners clip headers */
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary) !important;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+.product header {
+    background-color: transparent !important;
+    /* Unified BG */
+    color: var(--slate-50) !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    border-radius: 12px 12px 0 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product header span {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: var(--slate-50) !important;
+}
+
+.product header span.qty {
+    font-size: 0.9rem !important;
+    color: var(--text-muted) !important;
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Subtle bg for badge */
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500 !important;
+    border: 1px solid var(--border-color);
+}
+
+.product .product-desc {
+    padding: 20px !important;
+    color: var(--text-muted) !important;
+    flex-grow: 1;
+    /* Pushes footer down */
+    text-align: left !important;
+}
+
+.product .product-desc p {
+    color: var(--slate-300) !important;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+
+.product footer {
+    background-color: transparent !important;
+    /* Unified BG */
+    border-top: 1px solid var(--border-color) !important;
+    padding: 20px !important;
+    border-radius: 0 0 12px 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    /* Use gap instead of br */
+    margin-top: auto;
+}
+
+.product footer br {
+    display: none !important;
+    /* Hide the ugly br tags */
+}
+
+.product .product-pricing {
+    margin-bottom: 0 !important;
+    /* Reset margin, use gap */
+    width: 100%;
+}
+
+.product .product-pricing .price {
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    display: block;
+    text-align: center;
+}
+
+.product .btn-order-now {
+    width: 100%;
+    padding: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--success);
+    border: none;
+    transition: all 0.2s ease;
+    margin: 0 !important;
+    /* Reset margin */
+}
+
+
+
+.product .btn-order-now:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* 45. Sidebar Dropdown Button Styling (Refactor Match) */
+.panel-sidebar .dropdown .btn-default {
+    background-color: var(--slate-800) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    padding: 12px 15px !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    text-align: left !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.panel-sidebar .dropdown .btn-default:hover,
+.panel-sidebar .dropdown .btn-default:focus,
+.panel-sidebar .dropdown.open .btn-default {
+    background-color: var(--slate-700) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+    outline: none !important;
+}
+
+.panel-sidebar .dropdown-menu {
+    width: 100%;
+    margin-top: 5px !important;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* 44c. Order Button & Checkout Button - Force Blue */
+.btn-order-now,
+.btn-order-now.btn-success,
+.btn-checkout,
+.btn-checkout.btn-success {
+    background-color: #3b82f6 !important;
+    border-color: #3b82f6 !important;
+    color: #fff !important;
+    transition: background-color 0.2s, transform 0.1s !important;
+}
+
+.btn-order-now:hover,
+.btn-order-now.btn-success:hover,
+.btn-order-now:focus,
+.btn-order-now.btn-success:focus,
+.btn-order-now:active,
+.btn-order-now.btn-success:active,
+.btn-checkout:hover,
+.btn-checkout.btn-success:hover,
+.btn-checkout:focus,
+.btn-checkout.btn-success:focus,
+.btn-checkout:active,
+.btn-checkout.btn-success:active {
+    background-color: #2563eb !important;
+    border-color: #2563eb !important;
+    color: #fff !important;
+    transform: translateY(-1px);
+}
